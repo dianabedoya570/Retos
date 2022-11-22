@@ -1,0 +1,28 @@
+*{  background: hsl(184deg 100% 34%)
+
+}
+
+#img_superior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -65%;
+    margin-left: -65%;
+
+}
+
+#img_inferior{
+    position: absolute;
+
+}
+
+#card {
+    background: black;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    top: 50%;
+    bottom: 50%;
+}
