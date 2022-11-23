@@ -1,5 +1,11 @@
-*{  background: hsl(184deg 100% 34%)
+@font-face {
+    font-family: 'kumbh';
+    src: url("../fonts/KumbhSans-VariableFont_wght.ttf");
+}
 
+
+body{  background: hsl(184deg 100% 34%);
+font-family: 'kumbh';
 }
 
 #img_superior {
@@ -17,19 +23,19 @@
 }
 
 .card {
-    border: solid 1px #fff; 
+  
     height: 450px;
     width: 350px;
     position: absolute;
     right: 40%;
     left: 40%;
-    top: 40%;
+    top: 30%;
     bottom: 40%;
     border-radius: 5%;
-
+    overflow-x:auto
 }
 .card__banner{
-    border: solid 1px #00f; 
+  
     height: 30%;
     width: 99%;
     border-radius: 5% 5% 0% 0%;
@@ -40,15 +46,16 @@
     border-radius: 5% 5% 0% 0%;
 }
 .card__info{
-    border: solid 1px rgb(247, 0, 255); 
+    border: solid 1px #fff;
     background: #fff;
     height: 68%;
-    width: 99%;    
-    border-radius:0% 0% 5% 5%;
+    width: 99%;
+    border-radius: 0% 0% 5% 5%;
+  
 }
 #card__display{
 
-    border:solid 1px rgb(255, 0, 0); 
+  /* border:solid 1px rgb(255, 0, 0); */
     position: absolute;
     height: 100px;
     width: 100px; 
@@ -60,4 +67,50 @@
 #card__display>img{
     object-fit:contain;
     border-radius: 50%;
+    border-color: white;
+    border-style: solid;
+    border-width: 5px;
 }
+#bl{
+   
+    background: #fff;
+    height: 50px;;
+}
+.card__info__name{
+    padding: 10% 0 10% 0%;
+    background: #fff;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+}
+.card__info__scores{
+   
+    background: #fff;
+  
+}
+table{
+    
+    width: 70%;
+    overflow-x:auto;
+    margin :auto;
+    
+}
+
+  th {
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+
+  }
+  td {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  p{text-align: center;
+
+  }
+   br{
+    color: darkslategray;
+   }
