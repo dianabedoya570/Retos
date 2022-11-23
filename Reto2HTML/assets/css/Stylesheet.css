@@ -21,19 +21,34 @@ font-family: 'kumbh';
     position: absolute;
 
 }
-
 .card {
   
     height: 450px;
     width: 350px;
     position: absolute;
-    right: 40%;
-    left: 40%;
-    top: 30%;
-    bottom: 40%;
+    left: 50%;
+    top: 50%;
     border-radius: 5%;
-    overflow-x:auto
+    transform: translate(-50%, -50%);
 }
+
+/*
+
+@media (min-width: 768x) {
+    .card {
+  
+        height: 450px;
+        width: 350px;
+        position: absolute;
+        right: 40%;
+        left: 40%;
+        top: 30%;
+        bottom: 40%;
+        border-radius: 5%;
+      
+    }
+  }*/
+
 .card__banner{
   
     height: 30%;
