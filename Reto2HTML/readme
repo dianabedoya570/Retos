@@ -1,0 +1,14 @@
+Reto
+
+construir este componente de tarjeta de perfil y lograr que se parezca lo más posible al diseño.
+
+Diseño
+
+Se define la hoja de estilos para la tarjeta de usuario
+
+necesita seguir estos pasos:
+
+1. Se crea el repositorio y se define la estructura del proyecto para el HTML y el CSS.
+2. Se genera la estructura HTML para la tarjeta
+3. Se estudia posicionamiento, para ubicar los diferentes elementos de la tarjeta.
+4. Se estudia el diseño de bordes.
