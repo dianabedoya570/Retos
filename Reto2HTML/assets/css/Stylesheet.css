@@ -13,26 +13,43 @@
     src: url("../fonts/static/KumbhSans-ExtraBold.ttf");
 }
 
-body{  background: hsl(184deg 100% 34%);
-font-family: 'kumbh';
-margin:0;
+html{
+    height: 100%;
+    width: 100%;
+
+}
+ body{
+    min-width: 100%;
+    min-height: 100%;
+    background-color:#f0f0f0;
+ }
+
+.container{  
+    background: hsl(184deg 100% 34%);
+    font-family: 'kumbh';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /*todo lo que  se desborde se esconde*/
 }
 
 #img_superior {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: -50%;
-    margin-left: -50%;
+    margin-top: -20%;
+    margin-left: -20%;
+    max-width: 100%;
+    max-height: 100%;
 
 }
 
 #img_inferior{
     position: absolute;
-    top: 0;
-    left: 0;
     margin-top: 34%;
     margin-left: 40%;
+    max-width: 100%;
+    max-height: 100%;
 
 }
 .card {
@@ -52,7 +69,7 @@ margin:0;
 .card__banner{
   
     height: 30%;
-    width: 99%;
+    width: 100%;
     border-radius: 5% 5% 0% 0%;
 }
 .card__banner>img{
@@ -64,13 +81,11 @@ margin:0;
     border: solid 1px #fff;
     background: #fff;
     height: 68%;
-    width: 99%;
+    width: 100%;
     border-radius: 0% 0% 5% 5%;
   
 }
 #card__display{
-
-  /* border:solid 1px rgb(255, 0, 0); */
     position: absolute;
     height: 100px;
     width: 100px; 
@@ -139,3 +154,15 @@ table{
    br{
     color: darkslategray;
    }
+@media (min-width:1280px){
+    .container{
+
+        width: 85%;
+        height: 85%;;
+        top:0;
+        bottom: 0;
+        right:0;
+        left: 0;
+        margin: auto;
+    }
+}
