@@ -14,9 +14,9 @@ function flatten(arr) {
 
 function flatten(arr) {
     const result = []
-    let a
+    
     for (let i = 0; i < arr.length; i++) {
-     a= arr[i];
+      const a= arr[i];
       for( let j=0;j< a.length;j++){
         result.push(a[j])
       }  
