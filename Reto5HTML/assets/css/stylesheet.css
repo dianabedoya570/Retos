@@ -3,6 +3,7 @@
 *{
     background-color: #f0f0f0; 
     font-family: 'Red Hat Display';
+
 }
 
 body{
@@ -12,13 +13,15 @@ body{
     flex-direction:column;
     justify-content: center;
     align-items: center;
+
 }
 main{
     align-self:center;
-    background-color:  #ffffff;
-    height: 550px;
-    width: 320px;
+    background-color:  #ec5757;
+    height: 450px;
+    width: 420px;
     border-radius: 5%;
+  
 }
 
 .title{
