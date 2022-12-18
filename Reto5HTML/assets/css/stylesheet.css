@@ -1,26 +1,31 @@
  @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
 *{
-    background-color: #f0f0f0; 
+  
     font-family: 'Red Hat Display';
 
 }
 
 body{
- 
+    width: 100%;
+    height: 100vh;
     background-color: #dde8ff;; 
     display: flex;
     flex-direction:column;
     justify-content: center;
     align-items: center;
-
+    background-image: url("../image/pattern-background-desktop.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 main{
     align-self:center;
-    background-color:  #ec5757;
-    height: 450px;
-    width: 420px;
+    background-color:  #ffffff;
+    height: 500px;
+    width: 320px;
     border-radius: 5%;
+    
   
 }
 
@@ -38,57 +43,84 @@ main{
   background-color:  #ffffff;
 }
 .description{
-    padding: 5px;
+    padding: 2px;
     text-align: center;
     background-color:  #ffffff;
+    font-size: small;
+    color:#9aa0b4;
 }
 h2{
     background-color:  #ffffff;
+    margin: 2px;
 }
 
 .plan{
-    display: grid;
+    background-color: #f7f9fd;
+    display:grid;
     border-radius: 10px 10px 10px 10px;
-    margin: 20px;
-    gap: 0;
+    margin: 20px;  
+  
+
 }
 
-#img_plan{
-    grid-column-start: 1;
-    grid-column-end: 2;
+#nota{
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end:4 ;
+}
+#img__plan{
+  padding: 10px;
+ }
+
+
+.texto_plan{
+    grid-column-start: 2;
+    grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 3;
-    padding:20px 0 0 20px;
+    grid-row-end:4 ;
 }
-
 #tipo__plan{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    margin: 10px 0 0 0px;
+    margin: 15px 0 0 0px;
+    padding: 0px;
+    background-color: #f7f9fd;
+    font-weight: bolder;
+    font-size: medium;
 }
-
 #precio__plan{
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
     margin: 0px 0 10px 0;
+    padding: 0px;
+    background-color: #f7f9fd;
+    color:#9aa0b4;
+    font-size: small;
+
 }
-#boton__plan{
+.boton{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end:4 ;
+    padding: 5px 10px 15px 10px;
+}
+
+#boton__plan{
     align-self: center;
+    background-color: #f7f9fd;
+    text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+}
+#boton__plan:hover,
+#boton__plan:focus {
+  color: hsl(245, 75%, 70%);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .buttons{
     display: flex;
     flex-direction:column;
     justify-content: center;
-    margin: 10%;
+    margin: 10px;
     background-color: #ffffff;
 }
 
@@ -101,6 +133,15 @@ h2{
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
+.pay:hover,
+.pay:focus {
+
+    color: rgb(24, 128, 146);
+  
+  cursor: pointer;
+}
+
+
 .cancel{
     background-color: #ffffff;
   
@@ -109,3 +150,26 @@ h2{
     border-radius: 15px;
     margin: 10px;
 }
+.cancel:hover,
+.cancel:focus {
+  color: hsl(245, 75%, 70%);
+  cursor: pointer;
+}
+
+@media (min-width: 500px) {
+    body {
+      height: 100vh;
+      width: 100vw;
+      background-image: url("../image/pattern-background-mobile.svg");
+      box-shadow: 0px 15px 30px 0px rgba(72, 72, 72, 0.2);
+      background-color: #dde8ff;
+    }
+    .main {
+      height: 80%;
+      width: 85%;
+
+    }
+    #summaryContainer {
+      max-width: 400px;
+      max-height: 550px;
+    }

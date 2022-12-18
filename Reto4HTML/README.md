@@ -4,7 +4,7 @@ This is a solution to the fourth project of the Make It Real course.
 
 ## Table of contents
 
-- [Make It Real - Single price grid component](#make-it-real---single-price-grid-component)
+- [Make It Real - Reto React primeros pasos (#make-it-real---Reto React primeros pasos)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
@@ -21,15 +21,12 @@ This is a solution to the fourth project of the Make It Real course.
 
 ### The challenge
 
-In this challenge we have developed a pricing component and make it as similar to design as possible.
-
-- Mobile design.
-- Desktop design.
+In this challenge, we have developed a gallery for Rick and Morty characters
+consuming an api service
 
 ### Screenshot
 
-![Mobile](./capturas/mobile.jpeg)
-![Desktop](./capturas/desktop.jpeg)
+![Desktop](/public/captura/RetoReact.PNG)
 
 ## My process
 
@@ -37,77 +34,70 @@ In this challenge we have developed a pricing component and make it as similar t
 
 - Flexbox
 - Grid
-- Semantic HTML5 markup
-- CSS custom properties
-- Mobile-first workflow
+- React
+- Axios
+- postman
 
 ### What I learned
 
-We learned how to use Grid and Flexbox to desing renponsive layout.
+We learned how to create a basic app with react,
+and how to make an API request and use the result inside the de app.
 
-We also used custom CSS to modify buttons and texts properties: e.g. colors, font-size, margin, paddings, etc.
+```js 
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './assets/css/index.css';
+import App from './views/App';
 
-Semantic HTML5
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App/>
+  </React.StrictMode>
+);
 
-```html
-<section class="Top__section">
-  <div>
-    <h2>Join our community</h2>
 
-    <h3 id="top_subtitle">30-day, hassle-free money back guarantee</h3>
-    <p id="top_text">
-      Gain access to our full library of tutorials along with expert code
-      reviews. Perfect for any developers who are serious about honing their
-      skills.
-    </p>
-  </div>
-</section>
+
 ```
 
-Flexbox and Grid
+Axios
 
-```css
-body {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background-color: #e6eff6;
-  color: #ffffff;
-  font-size: 16px;
-  font-family: "karla", sans-serif;
-  width: 100vw;
-  height: 100vh;
-  font-size: 13px;
-}
+```js
 
-@media (min-width: 500px) {
-  .section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 60vw;
-    height: 400px;
-    max-width: none;
-    height: 60vh;
-    align-self: center;
-    font-size: 15px;
-  }
+export default function Cards() {
+  const [characters, setCharacters] = useState([]);
+  useEffect(() => {
+    axios.get("https://rickandmortyapi.com/api/character").then((res) => {
+      setCharacters(res.data.results);
+    });
+  });
+
+  return (
+    <div className="main">
+     <h1>Characters</h1><br/>
+     <section className="cards_container">
+      
+      {characters.map((personajeAct, pos) => {
+        return <Card personaje={personajeAct} />;
+      })}
+    </section>
+    </div>
+  );
 }
 ```
-
 ### Continued development
 
-I will be nice to use another media query for shadow transition on medium size screens.
+I will be nice to learn more about react
 
 ### Useful resources
 
-- [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - very straigh foward sumary of flexbox properties.
-- [Grid](https://www.youtube.com/watch?v=-kgGATnsPbs) - Useful Grid tutorial in YouTube (also in spanish).
+- [React](https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started) - Useful React material for begginers.
+- [Axios](https://www.freecodecamp.org/espanol/news/como-usar-axios-con-react/) - Useful Axios tutorial 
 
 ## Author
 
 - github - [Diana Bedoya](https://github.com/dianabedoya570)
-- github - [Ivan Cabulo](https://github.com/icabulo)
+- github - [Andres Pavas](https://github.com/pavas0921)
 
 ## Acknowledgments
 
