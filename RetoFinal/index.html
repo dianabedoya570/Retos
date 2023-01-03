@@ -3,30 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/stylesheets.css">
-    <title> Verification code form</title>
+    <link rel="stylesheet" href="./assets/css/stylesheets.css" />
+    <title>Verification code form</title>
   </head>
   <body>
     <main>
-    <h1>AUTHORIZATION CODE</h1>
-    <section class="formulario">
-      <div>
-        <p>Please enter the code that we sent to (***) ***-2819.</p>
-      </div> 
-      <form action="">
-
-        <div class="digits-code">
-              <input class="digit" type="text" id="digit1" />
-              <input class="digit" type="text" id="digit2"/>
-              <input class="digit" type="text" id="digit3" />
-            <input class="digit" type="text" id="digit4" />
+      <h1>AUTHORIZATION CODE</h1>
+      <section class="formulario">
+        <div>
+          <p>Please enter the code that we sent to (***) ***-2819.</p>
         </div>
-        <div class="verify-code">
-          <button>VERIFY</button>
-        </div>
-        
-      </form>
-    </section>
+        <form action="">
+          <div id="digits-code_div" class="digits-code">
+            <input class="digit" type="number" id="digit1" />
+            <input class="digit" type="number" id="digit2" />
+            <input class="digit" type="number" id="digit3" />
+            <input class="digit" type="number" id="digit4" />
+          </div>
+          <div class="verify-code">
+            <button id="verifyButton">VERIFY</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="JS/verificationCodeForm.js"></script>
   </body>
-</MAIN>
 </html>
