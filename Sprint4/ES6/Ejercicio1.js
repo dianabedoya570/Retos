@@ -14,16 +14,28 @@ const courses = [
     { course_id: 2, student_id: 2 }
   ]
 
-  const getCurso=(id)=>{
-    let nameCurso=undefined
-    courses.forEach(element => {
-       
-        if(element._id===id){
-            nameCurso= element.title
-        }
+  const getEstudiantesCurso=()=>{
+    
+    courses.forEach(elementC => {
+      console.log (`- ${elementC.name}`);
+       /* enrollments.forEach(elementE=>{
+         if(elementC._id===elementE._id){
+          console.log (`* ${getEstudiante(elementE._id)}`);
+         }
+       }) */
     });
-    return nameCurso
+
   }
 
+  const getEstudiante=(id)=>{
+    let nameEstudiante=undefined;
+    students.forEach(element => {
+       
+        if(element._id===id){
+            nameEstudiante= element.name;
+        }
+    });
+    return nameEstudiante;
+  }
 
-  console.log((getCurso(3)))
+getEstudiantesCurso();
